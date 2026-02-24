@@ -10,7 +10,9 @@ class SimpleNN(nn.Module):
         self.layers_stack = nn.Sequential(
             nn.Flatten(),
             nn.Linear(in_features=input_dim, out_features=hidden_dim),
+            nn.ReLU(),
             nn.Linear(in_features=hidden_dim, out_features=output_dim),
+            nn.ReLU()
         )
 
     def forward(self, x):

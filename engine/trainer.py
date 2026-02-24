@@ -28,9 +28,6 @@ class Trainer():
 
             training_loss = 0.0
             for batch, (X, y) in enumerate(self.data_train_loader):
-                print("Batch: ", batch)
-                print("X: ", X.size())
-                print("y: ", y.size())
                 self.model.train()
 
                 #Forward pass
