@@ -26,6 +26,7 @@ class Trainer():
 
 
     def training_step(self):
+        torch.manual_seed(42)
         train_time_start_on_cpu = time.time()
         for epoch in range(self.epochs):
             print(f"Epoch: {epoch} ------------------------------")
@@ -53,6 +54,7 @@ class Trainer():
         utils.print_train_time(train_time_start_on_cpu, end_time_train_on_cpu, self.device)
 
     def test_step(self):
+        torch.manual_seed(42)
         for epoch in range(self.epochs):
             print(f"Epoch: {epoch} ------------------------------")
             test_loss = 0.0

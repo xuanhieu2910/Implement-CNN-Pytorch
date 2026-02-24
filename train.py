@@ -17,7 +17,7 @@ def main():
     data_loader = DataLoaderAdv(data_training, test_training)
     model = SimpleNN(input_dim=784, output_dim=10, hidden_dim=10, device = device)
     loss_fn = Losser()
-    optimizer = OptimizerCustom(model.parameters(), 0.001)
+    optimizer = OptimizerCustom(model.parameters(), 0.1)
     trainer = Trainer(epochs=3,
                       data_train_loader = data_loader.train_dataloader,
                       data_test_loader =  data_loader.test_dataloader,
