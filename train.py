@@ -26,6 +26,7 @@ def main():
                       optimizer = optimizer,
                       device = device)
     trainer.training_step()
+    trainer.test_step()
 
 
 if __name__ == "__main__":
