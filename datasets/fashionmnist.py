@@ -27,3 +27,4 @@ class FashionMNIST():
                 download=True,
                 transform=self.transforms
             )
+        return self.training_data, self.validation_data
