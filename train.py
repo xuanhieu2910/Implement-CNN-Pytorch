@@ -23,7 +23,8 @@ def main():
                       data_test_loader =  data_loader.test_dataloader,
                       model = model,
                       loss = loss_fn,
-                      optimizer = optimizer)
+                      optimizer = optimizer,
+                      device = device)
     trainer.training_step()
 
 
